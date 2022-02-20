@@ -9,7 +9,7 @@ import { async, deepCopy } from '@firebase/util';
 
 function App() {
   const [chats, setChats] = useState([]);
-  console.log(chats)
+
   useEffect(() => {
     const collectionRef = collection(db, "chats")
     const q = query(collectionRef, orderBy("timestamp", "asc"))
